@@ -1,0 +1,238 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="1000"
+        d:DesignHeight="650"
+        x:Class="RainbowMagic.MainWindow"
+        Title="RainbowMagic"
+        Width="1000"
+        Height="650"
+        MinWidth="800"
+        MinHeight="500">
+
+    <DockPanel>
+
+        <Menu DockPanel.Dock="Top">
+
+            <MenuItem Header="_File">
+                <MenuItem Header="_New"/>
+                <MenuItem Header="_Open"/>
+                <Separator/>
+                <MenuItem Header="_Save"/>
+                <Separator/>
+                <MenuItem Header="E_xit"/>
+            </MenuItem>
+
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Undo"/>
+                <MenuItem Header="_Redo"/>
+                <Separator/>
+                <MenuItem Header="Cu_t"/>
+                <MenuItem Header="_Copy"/>
+                <MenuItem Header="_Paste"/>
+            </MenuItem>
+
+            <MenuItem Header="_Tools">
+                <MenuItem Header="_Settings"/>
+            </MenuItem>
+
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About"/>
+            </MenuItem>
+
+        </Menu>
+
+        <Border DockPanel.Dock="Bottom"
+                BorderThickness="1,1,0,0"
+                BorderBrush="#CCCCCC"
+                Padding="8,4">
+
+            <Grid ColumnDefinitions="*,Auto">
+
+                <TextBlock Text="Ready"
+                           VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Column="1"
+                           Text="Version 1.0.1"
+                           VerticalAlignment="Center"/>
+
+            </Grid>
+
+        </Border>
+
+        <Grid ColumnDefinitions="220,*">
+
+            <Border Grid.Column="0"
+                    Background="#F3F3F3"
+                    BorderBrush="#CCCCCC"
+                    BorderThickness="0,0,1,0">
+
+                <StackPanel Margin="10">
+
+                    <TextBlock Text="RainbowMagic"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Margin="5,5,5,20"/>
+
+                    <Button Content="Dashboard"
+                            Height="40"
+                            HorizontalContentAlignment="Left"
+                            Padding="12,0"
+                            Margin="0,0,0,5"/>
+
+                    <Button Content="Projects"
+                            Height="40"
+                            HorizontalContentAlignment="Left"
+                            Padding="12,0"
+                            Margin="0,0,0,5"/>
+
+                    <Button Content="Settings"
+                            Height="40"
+                            HorizontalContentAlignment="Left"
+                            Padding="12,0"
+                            Margin="0,0,0,5"/>
+
+                    <Button Content="About"
+                            Height="40"
+                            HorizontalContentAlignment="Left"
+                            Padding="12,0"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <ScrollViewer Grid.Column="1">
+
+                <StackPanel Margin="30">
+
+                    <TextBlock Text="Dashboard"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Welcome to RainbowMagic."
+                               FontSize="16"
+                               Margin="0,0,0,30"/>
+
+                    <Border BorderBrush="#CCCCCC"
+                            BorderThickness="1"
+                            CornerRadius="4"
+                            Padding="20"
+                            Margin="0,0,0,20">
+
+                        <StackPanel>
+
+                            <TextBlock Text="Application"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Margin="0,0,0,15"/>
+
+                            <Grid ColumnDefinitions="180,*"
+                                  RowDefinitions="Auto,Auto,Auto"
+                                  RowSpacing="12">
+
+                                <TextBlock Text="Application name:"
+                                           VerticalAlignment="Center"/>
+
+                                <TextBlock Grid.Column="1"
+                                           Text="RainbowMagic"
+                                           VerticalAlignment="Center"/>
+
+                                <TextBlock Grid.Row="1"
+                                           Text="Version:"
+                                           VerticalAlignment="Center"/>
+
+                                <TextBlock Grid.Row="1"
+                                           Grid.Column="1"
+                                           Text="1.0.1"
+                                           VerticalAlignment="Center"/>
+
+                                <TextBlock Grid.Row="2"
+                                           Text="Status:"
+                                           VerticalAlignment="Center"/>
+
+                                <TextBlock Grid.Row="2"
+                                           Grid.Column="1"
+                                           Text="Running"
+                                           VerticalAlignment="Center"/>
+
+                            </Grid>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <Border BorderBrush="#CCCCCC"
+                            BorderThickness="1"
+                            CornerRadius="4"
+                            Padding="20">
+
+                        <StackPanel>
+
+                            <TextBlock Text="Example Settings"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Margin="0,0,0,15"/>
+
+                            <Grid ColumnDefinitions="180,*"
+                                  RowDefinitions="Auto,Auto,Auto"
+                                  RowSpacing="12">
+
+                                <TextBlock Text="Name:"
+                                           VerticalAlignment="Center"/>
+
+                                <TextBox Grid.Column="1"
+                                         PlaceholderText="Enter your name"/>
+
+                                <TextBlock Grid.Row="1"
+                                           Text="Theme:"
+                                           VerticalAlignment="Center"/>
+
+                                <ComboBox Grid.Row="1"
+                                          Grid.Column="1"
+                                          SelectedIndex="0">
+
+                                    <ComboBoxItem Content="System"/>
+                                    <ComboBoxItem Content="Light"/>
+                                    <ComboBoxItem Content="Dark"/>
+
+                                </ComboBox>
+
+                                <TextBlock Grid.Row="2"
+                                           Text="Enabled:"
+                                           VerticalAlignment="Center"/>
+
+                                <CheckBox Grid.Row="2"
+                                          Grid.Column="1"
+                                          Content="Enable application"/>
+
+                            </Grid>
+
+                            <StackPanel Orientation="Horizontal"
+                                        HorizontalAlignment="Right"
+                                        Margin="0,20,0,0">
+
+                                <Button Content="Cancel"
+                                        Width="90"
+                                        Margin="0,0,10,0"/>
+
+                                <Button Content="Save"
+                                        Width="90"/>
+
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </StackPanel>
+
+            </ScrollViewer>
+
+        </Grid>
+
+    </DockPanel>
+
+</Window>
